@@ -1,0 +1,28 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+//		double x = 10.35784;
+//		System.out.println(x);
+//		System.out.printf("%.2f%n", x);
+//		Locale.setDefault(Locale.US); 
+////		Colocando ponto ao invés de virgula
+//		System.out.printf("%.2f%n", x);
+//		System.out.println("RESULTADO = " + x + " METROS");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String x;
+		x = sc.next();
+		System.out.println("Voce digitou: ", x);
+		
+		
+		
+		sc.close();
+	}
+
+}

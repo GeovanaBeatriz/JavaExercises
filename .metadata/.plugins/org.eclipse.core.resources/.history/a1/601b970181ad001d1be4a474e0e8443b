@@ -1,0 +1,13 @@
+package entities;
+
+public class employee {
+	public String Name;
+	public double GrossSalary;
+	public double Tax;
+	
+	
+	public double netSalary() {
+		return GrossSalary - Tax;
+	}
+
+}
