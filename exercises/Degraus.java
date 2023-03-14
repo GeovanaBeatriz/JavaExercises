@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class Degraus {
     
     public static void main(String[] args){
@@ -16,5 +14,7 @@ public class Degraus {
         double degraus = altura / centimetros;
 
         System.out.println("Você irá subir " + degraus + " degraus");
+
+        scanner.close();
     }
 }

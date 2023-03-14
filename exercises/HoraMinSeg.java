@@ -18,5 +18,7 @@ public class HoraMinSeg {
         s = resto / 60;
 
         System.out.printf(h + "h"+ m + "min"+ s + "seg");
+
+        scanner.close();
     }
 }
