@@ -20,14 +20,15 @@ public class NotaFinal {
             double mediaFinal = (2 * n1 + 3 * n2 + 5 * n3) / 10; //Aplicando média ponderada
 
             if(mediaFinal > 0 && mediaFinal <= 2.9){
-                System.out.println("Aluno reprovado!");
+                System.out.println("Aluno reprovado! Nota: " + mediaFinal);
             }
             else if(mediaFinal >= 3.0 && mediaFinal <= 4.9){
-                System.out.println("Aluno em recuperação!");
+                System.out.println("Aluno em recuperação! Nota: " + mediaFinal);
             }
             else{
-                System.out.println("Aluno aprovado!");
+                System.out.println("Aluno aprovado! Nota: " + mediaFinal);
             }
         }
+        scanner.close();
     }
 }
