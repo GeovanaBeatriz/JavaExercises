@@ -1,4 +1,4 @@
-package Condicional;
+
 import java.util.Scanner;
 
 public class PositivoOuNegativo {

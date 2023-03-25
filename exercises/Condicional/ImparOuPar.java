@@ -1,4 +1,3 @@
-package Condicional;
 import java.util.Scanner;
 
 public class ImparOuPar {
