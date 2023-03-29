@@ -27,9 +27,6 @@ public class Proporcao {
 
         System.out.print("O primeiro ganhou R$ " + String.format("%.2f", proporcao1) + "\nO segundo ganhou R$ " + String.format("%.2f", proporcao2) + "\nO terceiro ganhou R$ " + String.format("%.2f", proporcao3));
 
-
-
-
         scanner.close();
     }
 }

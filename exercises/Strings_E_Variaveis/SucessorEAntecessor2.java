@@ -13,7 +13,7 @@ public class SucessorEAntecessor2 {
 
             int soma = sucTriplo + antDobro;
 
-            JOptionPane.showMessageDialog(null, "O sucessor do triplo " + numero + " e " + sucTriplo + " e seu antecessor de seu dobro e " + antDobro + ". Sua soma e " + soma);
+            JOptionPane.showMessageDialog(null, "O sucessor do triplo " + numero + " é " + sucTriplo + " e o antecessor de seu dobro é " + antDobro + ". Sua soma é " + soma);
         
     }
 }
