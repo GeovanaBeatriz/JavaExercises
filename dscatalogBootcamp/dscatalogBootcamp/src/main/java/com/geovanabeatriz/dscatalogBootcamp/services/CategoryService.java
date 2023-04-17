@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.geovanabeatriz.dscatalogBootcamp.dto.CategoryDTO;
 import com.geovanabeatriz.dscatalogBootcamp.entities.Category;
 import com.geovanabeatriz.dscatalogBootcamp.repositories.CategoryRepository;
+import com.geovanabeatriz.dscatalogBootcamp.services.exceptions.ResourceNotFoundException;
 
 @Service //Service realiza a lógica da aplicação
 public class CategoryService {
@@ -48,5 +49,18 @@ public class CategoryService {
 		 entity.setName(dto.getName());
 		 entity = repository.save(entity);
 		 return new CategoryDTO(entity);
+	}
+
+	@Transactional
+	public CategoryDTO update(Long id, CategoryDTO dto) {
+		try {
+		Category entity = repository.getOne(id);
+		entity.setName(dto.getName());
+		entity = repository.save(entity);
+		return new CategoryDTO(entity);
+		}
+		catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException("id not found");
+		}
 	}
 }
