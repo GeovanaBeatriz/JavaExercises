@@ -22,7 +22,7 @@ public class Ex30Lista03 {
         for(int y = 1; y<= (2*num - 1); y++){ //O exercicio fornece essas informacoes
 
             somaSequenciaSub += aux * y ;
-            aux = -aux;
+            aux = -aux; //inverte o sinal para fazer a sequencia de n - n+1 
         }
 
 
