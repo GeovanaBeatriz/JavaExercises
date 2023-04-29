@@ -1,4 +1,3 @@
-package Repeticao;
 
 public class Soma50NumerosParess {
     

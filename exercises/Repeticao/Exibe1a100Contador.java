@@ -1,4 +1,3 @@
-package Repeticao;
 
 public class Exibe1a100Contador {
         public static void main( String[] args) throws InterruptedException{ 

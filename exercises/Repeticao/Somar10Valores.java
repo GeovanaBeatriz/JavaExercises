@@ -1,4 +1,3 @@
-package Repeticao;
 import java.util.Scanner;
 
 public class Somar10Valores {
