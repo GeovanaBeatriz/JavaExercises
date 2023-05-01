@@ -11,6 +11,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.geovanabeatriz.dscatalogBootcamp.repositories.ProductRepository;
+import com.geovanabeatriz.dscatalogBootcamp.services.exceptions.ResourceNotFoundException;
 
 @ExtendWith(SpringExtension.class) //Teste Unitário
 public class ProductServiceTests {
@@ -33,6 +34,17 @@ public class ProductServiceTests {
 		Mockito.doNothing().when(repository).deleteById(existingId);//Aqui diz como o Mock vai agir
 		
 		Mockito.doThrow(EmptyResultDataAccessException.class).when(repository).deleteById(nonExistingId);
+	}
+	
+	@Test
+	public void deleteShouldThrowResourceNotFoundExceptionWhenIdDoesNotExist() {
+		
+		Assertions.assertThrows(ResourceNotFoundException.class, () -> {
+			
+			service.delete(nonExistingId);
+		});
+		
+		Mockito.verify(repository, Mockito.times(1)).deleteById(nonExistingId); 
 	}
 	
 	@Test
