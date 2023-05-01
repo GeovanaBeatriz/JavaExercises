@@ -1,19 +1,28 @@
 package com.geovanabeatriz.dscatalogBootcamp.services;
 
+
+
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.geovanabeatriz.dscatalogBootcamp.entities.Product;
 import com.geovanabeatriz.dscatalogBootcamp.repositories.ProductRepository;
 import com.geovanabeatriz.dscatalogBootcamp.services.exceptions.DatabaseException;
 import com.geovanabeatriz.dscatalogBootcamp.services.exceptions.ResourceNotFoundException;
+import com.geovanabeatriz.dscatalogBootcamp.tests.Factory;
 
 @ExtendWith(SpringExtension.class) //Teste Unitário
 public class ProductServiceTests {
@@ -27,6 +36,10 @@ public class ProductServiceTests {
 	private Long existingId;
 	private Long nonExistingId;
 	private Long dependentId;
+	private PageImpl<Product> page;
+	private Product product;
+	
+	
 	
 	@BeforeEach
 	void setUp() throws Exception{
@@ -34,6 +47,12 @@ public class ProductServiceTests {
 		existingId = 1L;
 		nonExistingId = 1000L;
 		dependentId = 4L;
+		product = Factory.createProduct();
+		page = new PageImpl<>(List.of(product));
+		
+		Mockito.when(repository.findAll((Pageable)ArgumentMatchers.any())).thenReturn(page);
+		
+		Mockito.when(repository.save(ArgumentMatchers.any())).thenReturn(product);
 		
 		Mockito.doNothing().when(repository).deleteById(existingId);//Aqui diz como o Mock vai agir
 		
