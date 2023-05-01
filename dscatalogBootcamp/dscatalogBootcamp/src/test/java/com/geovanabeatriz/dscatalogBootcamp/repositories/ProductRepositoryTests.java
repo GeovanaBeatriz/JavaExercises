@@ -12,11 +12,11 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import com.geovanabeatriz.dscatalogBootcamp.entities.Product;
 import com.geovanabeatriz.dscatalogBootcamp.tests.Factory;
 
-@DataJpaTest 
+@DataJpaTest //Teste Integrado
 public class ProductRepositoryTests {
 
 	@Autowired
-	private ProductRepository repository;
+	private ProductRepository repository; //Integrado porque usa outros componentes
 	
 	private Long existingId;
 	private Long nonExistingId;
