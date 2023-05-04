@@ -24,6 +24,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.geovanabeatriz.dscatalogBootcamp.dto.ProductDTO;
 import com.geovanabeatriz.dscatalogBootcamp.services.ProductService;
+import com.geovanabeatriz.dscatalogBootcamp.services.exceptions.DatabaseException;
 import com.geovanabeatriz.dscatalogBootcamp.services.exceptions.ResourceNotFoundException;
 import com.geovanabeatriz.dscatalogBootcamp.tests.Factory;
 
@@ -45,12 +46,14 @@ public class ProductResourceTests {
 	
 	private Long existingId;
 	private Long nonExistingId;
+	private Long dependentId;
 	
 	@BeforeEach
 	void setUp() throws Exception{ //Simulando comportamentos
 		
 		existingId = 1L;
 		nonExistingId = 2L;
+		dependentId = 3L;
 		
 		productDTO = Factory.createProductDTO();
 		page = new PageImpl<>(List.of(productDTO));
@@ -64,7 +67,10 @@ public class ProductResourceTests {
 		Mockito.when(service.update(eq(existingId), any())).thenReturn(productDTO);
 		Mockito.when(service.update(eq(nonExistingId), any())).thenThrow(ResourceNotFoundException.class);
 		
-	}
+		Mockito.doNothing().when(service).delete(existingId);
+		Mockito.doThrow(ResourceNotFoundException.class).when(service).delete(nonExistingId);
+		Mockito.doThrow(DatabaseException.class).when(service).delete(dependentId);
+}
 	
 	@Test
 	public void updateShouldReturnProductDTOWhenIdExists() throws Exception{
