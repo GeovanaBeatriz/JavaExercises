@@ -6,12 +6,10 @@ public class Ex30Lista04 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        int [] A = new int[3];
-        int [] B = new int[3];
-        
-        int [] aux = new int[A.length + B.length];
+        int [] A = new int[10];
+        int [] B = new int[10];
 
-        int k = 0;
+       
         int i;
         int j;
 
@@ -27,24 +25,43 @@ public class Ex30Lista04 {
             B[i] = sc.nextInt();
         }
 
-        for(i=0;i< A.length;i++){
+        
+        
+        int [] AB = new int[10];
+        int k = 0;
 
-            for(j=0;j<B.length;j++){
-                
-                if(A[i] == B[j]){
-                    aux[k++] = A[i];
-                }
+        for(i=0; i<10; i++){            
+            int novo = A[i];
+            for(j=0; j<10; j++){
+                if(A[i] == B[j] && k < AB.length){ 
+                    boolean repete = false; 
+                    for(int l = 0; l<k; l++){                        
+                        if(AB[l] == novo){
+                            repete = true;
+                        }
+                    } 
+                    if(!repete){
+                        AB[k] = novo; 
+                        k++; 
+                    } 
+                } 
+            }
+            
+        }   
+        
+        System.out.print("Intersecção: [");
+        
+        if(k > 0){
+            for(i = 0; i < k; i++){
+                System.out.print(AB[i] + " ");
             }
         }
-
-        int [] AB = new int[k];
-        for(i = 0; i < k; i++){
-
-            AB[i] = aux[i];
+        else{
+            System.out.println("Não existem elementos na intersecção dos vetores");
         }
-
-        System.out.println(AB[i]);
+        
         
         sc.close();
-    }
+    
+}
 }
