@@ -46,22 +46,13 @@ public static void main(String[] args) {
 
         for(int i = 1; i < tamanho; i++){ 
 
- 
- 
-
             if(v[i] > maior){ 
 
                 maior = v[i]; 
-
             } 
-
         } 
 
-         
-
         System.out.print("Maior: " + maior); 
-
-        
 
         entrada.close(); 
 

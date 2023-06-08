@@ -22,13 +22,13 @@ public class SomaDosDivisores {
         }
 
         int soma = 0;
-        for(int y = 1; y <= num; y = y + 1){
+        for(int y = 1; y < num; y = y + 1){
             if(num % y == 0){
                 soma = soma + y;
             }
         }
 
-        soma = soma - num;
+        
         System.out.println("Soma dos divisores: " + soma);
 
         scanner.close();

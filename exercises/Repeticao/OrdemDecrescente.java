@@ -19,8 +19,8 @@ public class OrdemDecrescente {
             x++;
         }
 
-        for(int y = num; y >= 0; y = y - 1){ 
-            System.out.println(y);
+        for(int y = num; y >= 0; y--){ 
+            System.out.print(y + " ");
         }
 
         scanner.close();
