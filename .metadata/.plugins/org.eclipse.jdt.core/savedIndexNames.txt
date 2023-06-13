@@ -187,7 +187,6 @@ INDEX VERSION 1.132+C:\temp\ws-eclipse\JavaExercises\.metadata\.plugins\org.ecli
 2302112547.index
 2005269038.index
 2094774704.index
-685708182.index
 2980056212.index
 1006834122.index
 2425722903.index
