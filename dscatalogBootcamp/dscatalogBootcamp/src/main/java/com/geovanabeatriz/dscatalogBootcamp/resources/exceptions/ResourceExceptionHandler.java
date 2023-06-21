@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -39,15 +41,22 @@ public class ResourceExceptionHandler {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
 	}
 	
-	@ExceptionHandler(MethodArgumentValidException.class)
-	public ResponseEntity<StandardError> validation(MethodArgumentValidException e, HttpServletRequest request){
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseEntity<ValidationError> validation(MethodArgumentNotValidException e, HttpServletRequest request){
 		
-		StandardError err = new StandardError();
+		HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
+		ValidationError err = new ValidationError();
 		err.setTimestamp(Instant.now());
-		err.setStatus(HttpStatus.UNPROCESSABLE_ENTITY.value());
+		err.setStatus(status.value()); //Codigo 422
 		err.setError("Validation Exception");
 		err.setMessage(e.getMessage());
 		err.setPath(request.getRequestURI());
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
+		
+		for(FieldError f : e.getBindingResult().getFieldErrors()) {
+			
+		}
+		
+		
+		return ResponseEntity.status(status).body(err);
 	}
 }
