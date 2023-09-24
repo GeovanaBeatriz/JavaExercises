@@ -1,0 +1,18 @@
+INDEX VERSION 1.132+C:\temp\ws-eclipse\JavaExercises\dscatalogBootcamp\.metadata\.plugins\org.eclipse.jdt.core
+3096109172.index
+3510846143.index
+268970959.index
+2472301595.index
+370000667.index
+3017731304.index
+3271336262.index
+1865797976.index
+918304156.index
+3379510419.index
+2280947232.index
+3186332938.index
+1710892237.index
+4099433192.index
+2698442790.index
+718781778.index
+3137174700.index
