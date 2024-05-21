@@ -91,6 +91,21 @@ class Lista{
         return temp;
     }
 
+    public void removePrimeiraOcorrencia(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removePrimeiraOcorrencia'");
+    }
+
+    public No maiorElemento() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'maiorElemento'");
+    }
+
+    public String maiorElementoPosicao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'maiorElementoPosicao'");
+    }
+
 }
 
 class Pilha{

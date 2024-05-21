@@ -33,6 +33,37 @@ public class Pilha {
         }
         return s;
     }
+
+    //5
+    public void transfere(Pilha p2) {
+        Pilha aux = new Pilha();
+        // Desempilha de p1 e empilha em aux
+        while (!this.estaVazia()) {
+            aux.empilha(this.desempilha());
+        }
+        // Desempilha de aux e empilha em p2
+        while (!aux.estaVazia()) {
+            p2.empilha(aux.desempilha());
+        }
+    }
+
+    public static boolean ehPalindromo(String palavra) {
+        Pilha pilha = new Pilha();
+
+        // Empilha todos os caracteres da palavra
+        for (int i = 0; i < palavra.length(); i++) {
+            pilha.empilha(palavra.charAt(i)); //empilha caracter por caracter
+        }
+
+        // Desempilha os caracteres formando a palavra inversa
+        String palavraInvertida = "";
+        while (!pilha.estaVazia()) {
+            palavraInvertida += pilha.desempilha();
+        }
+
+        // Verifica se a palavra original é igual à palavra invertida
+        return palavra.equals(palavraInvertida);
+    }
 }
 
 class No {

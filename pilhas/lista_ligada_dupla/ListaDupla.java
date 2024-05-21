@@ -28,4 +28,19 @@ public class ListaDupla <T>{
         }
         ultimo = novo;
     }
+
+    public String removeFim() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeFim'");
+    }
+
+    public String removeInicio() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeInicio'");
+    }
+
+    public int posicaoDeElemento(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'posicaoDeElemento'");
+    }
 }

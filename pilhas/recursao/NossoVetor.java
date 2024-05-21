@@ -103,4 +103,52 @@ public class NossoVetor {
         quickSort(q+1, r);
         }
     }
+    public void insertionSort() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insertionSort'");
+    }
+    public void selectionSort() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'selectionSort'");
+    }
+    public String getUltimaPosicao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getUltimaPosicao'");
+    }
+    public void insereEmPosicao(int i, int j) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insereEmPosicao'");
+    }
+    public int contarOcorrencias(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'contarOcorrencias'");
+    }
+    public void removeEmPosicao(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeEmPosicao'");
+    }
+    public void removeTodasOcorrencias(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeTodasOcorrencias'");
+    }
+    public String contagemElementos() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'contagemElementos'");
+    }
+    public String tamanho() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'tamanho'");
+    }
+    public String maiorElemento() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'maiorElemento'");
+    }
+    public String somarElementos() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'somarElementos'");
+    }
+    public String maiorElementoPosicao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'maiorElementoPosicao'");
+    }
 }
