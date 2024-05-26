@@ -205,6 +205,14 @@ public class NossoVetor{
         return ultimaPosicao + 1;
     }
 
+    public double[] esvaziarVetor(){
+        for (int i = 0; i <= ultimaPosicao; i++) {
+            dados[i] = 0;
+        }
+        ultimaPosicao = 0;
+        return dados;
+    }
+
     //13. Somar os elementos do vetor
     public double somarElementos() {
         double soma = 0;

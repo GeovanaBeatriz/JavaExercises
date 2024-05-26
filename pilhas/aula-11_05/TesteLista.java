@@ -41,5 +41,9 @@ public class TesteLista {
         } else {
             System.out.println("O elemento 10 não foi encontrado na lista.");
         }
+
+        System.out.println(lista);
+        lista.removeElementoNaPosicao(3);
+        System.out.println(lista);
     }
 }

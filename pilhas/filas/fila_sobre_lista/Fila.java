@@ -40,4 +40,43 @@ public class Fila{
             return s;
         }
     }
+
+      //19. Dado um avalor, verificar sua posição na fila
+      public int posicaoDeElemento(int valor) {
+        No aux = primeiro;
+        int posicao = 0;
+        while (aux != null) {
+            if (aux.getInfo() == valor) { //valor da aux for igual ao do elemento passado
+                return posicao;
+            }
+            aux = aux.getProximo(); //pega o proximo nó
+            posicao++; //incrementa posição
+        }
+        return -1; // Elemento não encontrado
+    }
+}
+
+class No {
+    private int info;
+    private No proximo;
+    public No (int info) {
+        setInfo(info);
+        setProximo(null); //clareza
+    }
+    public int getInfo() {
+        return info;
+    }
+    public No getProximo() {
+        return proximo;
+    }
+    public void setInfo (int info) {
+        this.info = info;
+    }
+    public void setProximo(No proximo) {
+        this.proximo = proximo;
+    }
+    @Override
+    public String toString() {
+        return "|" + info + "|->";
+    }
 }

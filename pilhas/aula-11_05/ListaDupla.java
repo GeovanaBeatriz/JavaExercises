@@ -105,6 +105,26 @@ public class ListaDupla <T extends Number>{
         return -1; // Elemento não encontrado
     }
 
+    //4. Remover um elemento de uma determinada posição
+    public boolean removeElementoNaPosicao(int posicao){
+        NoDuplo<T> aux = primeiro;
+        int contador = 0;
+
+        while (aux != null && contador < posicao) {
+            aux = aux.getProximo(); //passando para o proximo elemento
+            contador++; //contador auxiliar para chegar na posicao desejada
+        }
+
+        if (aux == null) {
+            return false; //caso a lista esteja vazia
+        }
+
+        aux.getAnterior().setProximo(aux.getProximo());
+        aux.getProximo().setAnterior(aux.getAnterior());
+
+        return true;
+    }
+
      //6. Remover todas as ocorrências de um determinado elemento.
      public void removeTodasOcorrencias(int elemento) {
         NoDuplo<T> aux = primeiro;

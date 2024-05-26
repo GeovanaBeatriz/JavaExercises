@@ -137,6 +137,8 @@ public class Lista {
         }
     }
 
+    
+
     //12. Somar os elementos da lista
     public int somarElementos() {
         int soma = 0;

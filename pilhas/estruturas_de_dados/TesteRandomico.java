@@ -29,6 +29,10 @@ public class TesteRandomico {
         System.out.println("Posicao do maior elemento: " + novo.maiorElementoPosicao());
 
         System.out.println("Somar elementos: " + novo.somarElementos());
+
+        novo.esvaziarVetor();
+        System.out.println(novo);
+        
     }
 
 
