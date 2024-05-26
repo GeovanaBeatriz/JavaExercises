@@ -140,4 +140,9 @@ class Pilha{
         topo = topo.getProximo();
         return info;
     }
+
+    public void empilha(int nextInt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'empilha'");
+    }
 }

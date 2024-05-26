@@ -16,7 +16,7 @@ public class TesteOrdenacao{
             v.esvaziaVetor();
             v.preencheVetor();
             System.out.println("2o vetor gerado: " + v);
-            v.quickSort(0, tamanho-1);
+            v.quickSort(0, tamanho-1); //indice de inicio e fim do array
             System.out.println("Vetor ordenado pelo quick: " + v);
         }
 

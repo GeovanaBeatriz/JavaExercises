@@ -78,29 +78,30 @@ public class NossoVetor {
         }
     }
 
-    int partition(int p, int r){
-        double x = dados[r];
-        int i = p-1;
-        for(int j = p; j < r; j++){
-            if(dados[j] <= p){
+    int partition(int start, int end){ //index começo = p, index fim = r
+        double pivot = dados[end]; // O pivô é o elemento na posição 'r', ou seja, no fim do array
+        int i = start-1; //ponteiro da direita
+        for(int j = start; j <= end - 1; j++){ //j = ponteiro da esquerda
+            if(dados[j] < pivot){ // Se o elemento atual é menor ao pivô
                 i++;
                 double temp = dados[i];
                 dados[i] = dados[j];
                 dados[j] = temp;
             }
-        }    
+        }    //assim que todos os elementos menores ao pivot estiverem na esquerda e os maiores na direita
+             //coloca o pivot no seu local certo
             i++;
             double temp = dados[i];
-            dados[i] = x;
-            dados[r] = temp;
+            dados[i] = pivot;
+            dados[end] = temp;
             return i;
     }
 
-    public void quickSort(int p, int r){
-        if(p < r){
-        int q = partition(p, r);
-        quickSort(p, q-1);
-        quickSort(q+1, r);
+    public void quickSort(int start, int end){
+        if(start < end){
+        int pivot = partition(start, end); //descobre onde o pivo estará
+        quickSort(start, pivot-1); //partição da esquerda (usa o -1 para não incluir o pivot, pois ele já está no lugar certo)
+        quickSort(pivot+1, end); //partição da direita (usa o +1 para não incluir o pivot, pois ele já está no lugar certo)
         }
     }
     public void insertionSort() {
