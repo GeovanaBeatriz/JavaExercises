@@ -6,8 +6,8 @@ public class Fila{
     public boolean estaVazia() {
         return primeiro == null;
     }
-    public void enfileira (int i) {
-        No novo = new No(i);
+    public void enfileira (Pessoa p1) {
+        No novo = new No(p1);
         if (estaVazia()) {
             primeiro = novo;
         }
@@ -78,5 +78,21 @@ class No {
     @Override
     public String toString() {
         return "|" + info + "|->";
+    }
+    public No getEsquerdo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getEsquerdo'");
+    }
+    public void setEsquerdo(No novo) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setEsquerdo'");
+    }
+    public No getDireito() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDireito'");
+    }
+    public void setDireito(No novo) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDireito'");
     }
 }

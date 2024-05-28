@@ -39,7 +39,7 @@ public class Fila{
     public boolean enfileira(Pessoa p){
         if(!estaCheia()){
             ultimo = proximaPosicao(ultimo); //atualiza a ultima posição
-            dados[ultimo] = p; // atribui a pessoa a uma posição no vetor
+            dados[ultimo] = p; // atribui a pessoa a ultima posição no vetor
             tamanho++; //incrementa a variavel tamanho para depois usar ela para testar se o vetor está cheio ou vazio.
             return true;
         }
@@ -76,7 +76,7 @@ public class Fila{
                 s+= " ____ ";
             }
             else{
-                s += " " + dados[i].getAnoNasc() + " ";
+                s += " " + dados[i].getAnoNascimento() + " ";
             }
         }
         return s;
