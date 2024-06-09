@@ -164,11 +164,11 @@ public class Lista {
     }
 
     //14. Encontrar a posição do maior elemento armazenado.
-    public double maiorElementoPosicao() {
+    public int maiorElementoPosicao() {
         No aux = primeiro;
         No maior = aux;
-        double posicaoMaior = 0;
-        int i = 0;
+        int posicaoMaior = 0; //guarda posicao
+        int i = 0; //posição incrementada
         while(aux != null) {
             
             if(aux.getInfo() > maior.getInfo()){ 

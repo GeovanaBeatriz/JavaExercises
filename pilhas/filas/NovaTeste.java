@@ -6,7 +6,7 @@ public class NovaTeste{
         Random r = new Random();
         do{
         if(r.nextBoolean()){
-            f.enfileira(new Pessoa(r.nextInt(1000) + 1001));
+            f.enfileira(new Pessoa(r.nextInt(1000) + 1001, null));
         }
         else{
             f.desenfileira();

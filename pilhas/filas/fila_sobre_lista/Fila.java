@@ -1,3 +1,5 @@
+package fila_sobre_lista;
+
 public class Fila{
     private No primeiro;
     private No ultimo;
@@ -54,14 +56,22 @@ public class Fila{
         }
         return -1; // Elemento não encontrado
     }
+    public void enfileira(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'enfileira'");
+    }
 }
 
 class No {
     private int info;
     private No proximo;
-    public No (int info) {
-        setInfo(info);
+    public No (Pessoa p1) {
+        setInfo(p1);
         setProximo(null); //clareza
+    }
+    private void setInfo(Pessoa p1) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setInfo'");
     }
     public int getInfo() {
         return info;
@@ -78,21 +88,5 @@ class No {
     @Override
     public String toString() {
         return "|" + info + "|->";
-    }
-    public No getEsquerdo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEsquerdo'");
-    }
-    public void setEsquerdo(No novo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setEsquerdo'");
-    }
-    public No getDireito() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getDireito'");
-    }
-    public void setDireito(No novo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setDireito'");
     }
 }

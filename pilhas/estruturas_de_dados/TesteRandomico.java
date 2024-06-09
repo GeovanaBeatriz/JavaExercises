@@ -14,13 +14,11 @@ public class TesteRandomico {
         int ocorrencias = novo.contarOcorrencias(12);
         System.out.println("O elemento 12 aparece " + ocorrencias + " vezes no vetor");
 
-        //System.out.println("Antes de retirar o elemento: " +  novo);
-        //novo.removeEmPosicao(2);
-        //System.out.println("Após remoção do elemento: " + novo);
-
         System.out.println("Antes de retirar o elemento: " +  novo);
         novo.removeTodasOcorrencias(12);
         System.out.println("Após remoção do elemento: " + novo);
+
+        System.out.println(novo);
 
         System.out.println("Contagem elementos: " + novo.tamanho());
 
@@ -30,8 +28,7 @@ public class TesteRandomico {
 
         System.out.println("Somar elementos: " + novo.somarElementos());
 
-        novo.esvaziarVetor();
-        System.out.println(novo);
+        
         
     }
 

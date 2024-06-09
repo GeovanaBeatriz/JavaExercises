@@ -13,17 +13,6 @@ public class TesteLista {
             System.out.println(lista);
         }
 
-        System.out.println("Antes de remover: \n" +lista);
-        lista.removePrimeiraOcorrencia(20);
-        System.out.println("Depois de remover o número 20: \n" + lista); // Exibe a lista após a remoção
-
-        No maior = lista.maiorElemento();
-        if (maior != null) {
-            System.out.println("Maior elemento: " + maior.getInfo());
-        } else {
-            System.out.println("A lista está vazia.");
-        }
-
-        System.out.println("posição do maior elemento: " + lista.maiorElementoPosicao());
+        System.out.println("posicao do maior elemento: " + lista.maiorElementoPosicao());
     }
 }

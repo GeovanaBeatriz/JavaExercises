@@ -3,12 +3,10 @@ public class TesteFila{
         Fila f = new Fila();
         System.out.println(f);
 
-        Pessoa p1 = new Pessoa("Ana");
         Pessoa p2 = new Pessoa("Gil");
         Pessoa p3 = new Pessoa("Bia");
         Pessoa p4 = new Pessoa("Leo");
-
-        f.enfileira(p1);
+        
         f.enfileira(p2);
         System.out.println(f);
 

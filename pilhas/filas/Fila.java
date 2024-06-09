@@ -25,7 +25,7 @@ public class Fila{
     }
 
     int proximaPosicao(int posicao){
-        return (posicao + 1) % dados.length;
+        return (posicao + 1) % dados.length; //fila circular, ao chegar no fim da fila, volta ao inicio por causa do operador de módulo
     }
 
     public boolean estaVazia(){
@@ -38,7 +38,7 @@ public class Fila{
 
     public boolean enfileira(Pessoa p){
         if(!estaCheia()){
-            ultimo = proximaPosicao(ultimo); //atualiza a ultima posição
+            ultimo = proximaPosicao(ultimo); //atualiza a ultima posição chamando o metodo para ir para a ultima posição da fila
             dados[ultimo] = p; // atribui a pessoa a ultima posição no vetor
             tamanho++; //incrementa a variavel tamanho para depois usar ela para testar se o vetor está cheio ou vazio.
             return true;
@@ -48,7 +48,7 @@ public class Fila{
 
     public Pessoa desenfileira(){
         if(estaVazia()) return null;
-        Pessoa p = dados[primeiro];
+        Pessoa p = dados[primeiro]; // não precisa colocar, é só para retornar depois qual foi o valor apagado
         dados[primeiro] = null;
         primeiro = proximaPosicao(primeiro);
         tamanho--;

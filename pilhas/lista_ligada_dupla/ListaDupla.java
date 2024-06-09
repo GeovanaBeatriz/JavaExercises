@@ -29,18 +29,34 @@ public class ListaDupla <T>{
         ultimo = novo;
     }
 
-    public String removeFim() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeFim'");
+    public boolean removeElementoNaPosicao(int posicao){
+        NoDuplo<T> aux = primeiro;
+        int contador = 0;
+
+        while (aux != null && contador < posicao) {
+            aux = aux.getProximo(); //passando para o proximo elemento
+            contador++; //contador auxiliar para chegar na posicao desejada
+        }
+
+        if (aux == null) {
+            return false; //caso a lista esteja vazia
+        }
+
+        aux.getAnterior().setProximo(aux.getProximo());
+        aux.getProximo().setAnterior(aux.getAnterior());
+
+        return true;
     }
 
-    public String removeInicio() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeInicio'");
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        NoDuplo<T> aux = primeiro;
+        while (aux != null) {
+            sb.append(aux.getInfo()).append(" ");
+            aux = aux.getProximo();
+        }
+        return sb.toString();
     }
 
-    public int posicaoDeElemento(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'posicaoDeElemento'");
-    }
 }

@@ -1,7 +1,7 @@
 public class Pessoa{
     private int anoNasc;
     private String nome;
-    public Pessoa(int anoNasc, String nome){
+    public Pessoa(String nome){
         this.anoNasc = anoNasc;
         this.nome = nome;
     }
@@ -24,5 +24,9 @@ public class Pessoa{
     @Override
     public String toString() {
         return "Pessoa [anoNascimento=" + anoNasc + ", nome=" + nome + "]";
+    }
+    public String getAnoNascimento() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAnoNascimento'");
     }
 }
